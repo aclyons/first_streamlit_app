@@ -48,9 +48,5 @@ import snowflake.connector
 
 #New Section to display fruityvice api response
 add_my_fruit = streamlit.text_input('What fruit would you like to add?')
-streamlit.write('Thanks for adding ', fruit_choice)
-addmyfruit_response = requests.get("https://fruityvice.com/api/fruit/")
-fruityvice_normalized = pandas.json_normalize(addmyfruit_response.json())
-# write your own comment - what does this do?
-streamlit.dataframe(fruityvice_normalized)
+streamlit.write('Thanks for adding ', add_my_fruit)
 
