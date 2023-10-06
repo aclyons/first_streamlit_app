@@ -49,3 +49,4 @@ import snowflake.connector
 #New Section to display fruityvice api response
 add_my_fruit = streamlit.text_input('What fruit would you like to add?')
 streamlit.write('Thanks for adding ', fruit_choice)
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/")
