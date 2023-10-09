@@ -46,12 +46,6 @@ my_data_rows = my_cur.fetchone()
 streamlit.header("The fruit load contains:")
 streamlit.dataframe(my_data_rows)
 
-
-# write your own comment -what does the next line do? 
-fruityvice_normalized2 = pandas.json_normalize(fruityvice_response.json())
-# write your own comment - what does this do?
-streamlit.dataframe(fruityvice_normalized2)
-
 #New Section to display fruityvice api response
 add_my_fruit = streamlit.text_input('What fruit would you like to add?')
 streamlit.write('Thanks for adding ', add_my_fruit)
