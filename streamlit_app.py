@@ -39,12 +39,12 @@ import snowflake
 from snowflake import connector
 import snowflake.connector
 
-# my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-# my_cur = my_cnx.cursor()
-# my_cur.execute("SELECT * from pc_rivery_db.public.fruit_load_list")
-# my_data_row = my_cur.fetchone()
-# streamlit.header("The fruit load contains:")
-# streamlit.dataframe(my_data_row)
+my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+my_cur = my_cnx.cursor()
+my_cur.execute("SELECT * from pc_rivery_db.public.fruit_load_list")
+my_data_row = my_cur.fetchone()
+streamlit.header("The fruit load contains:")
+streamlit.dataframe(my_data_row)
 
 #New Section to display fruityvice api response
 add_my_fruit = streamlit.text_input('What fruit would you like to add?')
